@@ -3,3 +3,9 @@ This website gives you a list of various cryptocurrencies like bitcoin, litecoin
 
 The tools used are HTML, CSS and Javascript. 
 
+Running the project
+
+Install WAMP
+Run WAMP.
+open web page from browser: http://localhost/CryptoTrial_recent.html
+
