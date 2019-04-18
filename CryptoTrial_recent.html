@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	
+		<title> Cryptotrack </title>
+		
+		 <meta charset="utf-8" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet"> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<style>
+
+		
+		body
+		{
+			background-color: #FAFAFA;
+		}
+			
+		#title-div
+		{
+			padding: 0;
+			margin-top: -8px;
+			margin-left: -8px;
+			margin-right: -8px;
+			left: 0;
+			width:100%;
+			height: 100%;
+			background-color: #8258FA;
+		}
+		
+		.title
+		{
+			font-size: 35px;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 300;
+		}
+		
+		#border
+		{
+			border-bottom: solid;
+			border-bottom-width: 2px;
+			width: 220px;
+			margin-left:545px;
+			margin-top: -35px;
+		}
+		
+		#subtitle
+		{	
+			font-size: 25px;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 300;
+			margin-left: 510px;
+			margin-top: 5px;
+		}
+		
+		#money
+		{
+			font-size: 20px;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 300;
+			margin-left: 300px;
+			margin-bottom: 300px;
+			margin-top: 50px;
+
+		}
+		
+		#money th, #money td
+		{
+			border: 1px solid #ddd;
+			padding: 8px;
+			width: 200px;
+		}
+		
+		#money th
+		{
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			
+		}
+		
+		#money td
+		{
+			font-size: 18px;
+		}
+		
+		.dropdown-content
+		{
+			display:none;
+			position: absolute;
+		}
+		
+		.dropdown-content a
+		{
+			color: black;
+			padding: 12px 12px;
+			text-decoration: none;
+			display: block;
+			font-size: 15px;
+		}
+		
+		.dropdown-content a:hover
+		{
+			background-color: #f1f1f1;
+		}
+			
+		.dropdown-menu
+		{
+			cursor: pointer;
+		}
+
+		.dropdown-menu:hover .dropdown-content
+		{
+			background-color: #fafafa;
+			display:block;
+		}
+		
+		</style>
+		
+	</head>
+
+	<div class="skewed-bg">
+        <div class="content">
+        <h1 class="title">CRYPTOTRACK</h1>
+        </div>
+    </div>
+
+	<footer class="footer">
+	</footer>
+	<style>
+		@import "bourbon";
+
+		$greenyellow:  #ADFF2F;
+		$orange: #da5b45;
+		$paper: #f6efe9;
+
+		@include keyframes(colorSwapper){
+		  0% {
+			@include linear-gradient($purple, $orange);
+		  }
+		  50% {
+			@include linear-gradient($orange, $purple);
+		  }
+		  100% {
+			@include linear-gradient($purple, $orange);
+		  }
+		}
+
+		@include keyframes(solidColor){
+		  0% {
+			background-color: $greenyellow;
+		  }
+		  50% {
+			background-color: $orange;
+		  }
+		  100% {
+			background-color: $greenyellow;
+		  }
+		}
+
+		$main-color: #00B285;
+		html,body{
+		  height:100%;
+		}
+
+		body{
+		  background: #222;
+		  color: #FFF;
+		}
+
+		.skewed-bg{
+		  background: $main-color;
+		  padding: 200px 0;
+		  @include transform(skew(0deg, -10deg));
+		  margin-top: -200px;  
+		  
+		  .content{
+			@include transform(skew(0deg, 10deg));
+			text-align: center;
+			
+			.title{
+			  padding-top: 100px;
+			  font-weight: normal;
+			}
+			
+			.text{
+			  width:60%;
+			  margin: 25px auto;      
+			  color: lighten($main-color, 54);
+			}
+			
+		  } 
+		}
+
+		.footer{
+		  padding-top: 300px;
+		  
+		  .credits{
+			text-align: center;
+			color: #666;
+			
+			.link{
+			  color: $main-color;
+			  text-decoration: none;
+			}
+			
+		  }
+		  
+		}
+		@-webkit-keyframes colorSwapper {
+		  0% {
+			background-color: #ADFF2F;
+			background-image: -webkit-linear-gradient(#ADFF2F, #da5b45);
+			background-image: linear-gradient(#ADFF2F, #da5b45);
+		  }
+		  50% {
+			background-color: #da5b45;
+			background-image: -webkit-linear-gradient(#da5b45, #ADFF2F);
+			background-image: linear-gradient(#da5b45, #ADFF2F);
+		  }
+		  100% {
+			background-color: #ADFF2F;
+			background-image: -webkit-linear-gradient(#ADFF2F, #da5b45);
+			background-image: linear-gradient(#ADFF2F, #da5b45);
+		  }
+		}
+		@-moz-keyframes colorSwapper {
+		  0% {
+			background-color: #ADFF2F;
+			background-image: -webkit-linear-gradient(#ADFF2F, #da5b45);
+			background-image: linear-gradient(#ADFF2F, #da5b45);
+		  }
+		  50% {
+			background-color: #da5b45;
+			background-image: -webkit-linear-gradient(#da5b45, #ADFF2F);
+			background-image: linear-gradient(#da5b45, #ADFF2F);
+		  }
+		  100% {
+			background-color: #ADFF2F;
+			background-image: -webkit-linear-gradient(#ADFF2F, #da5b45);
+			background-image: linear-gradient(#ADFF2F, #da5b45);
+		  }
+		}
+		@keyframes colorSwapper {
+		  0% {
+			background-color: #ADFF2F;
+			background-image: -webkit-linear-gradient(#ADFF2F, #da5b45);
+			background-image: linear-gradient(#ADFF2F, #da5b45);
+		  }
+		  50% {
+			background-color: #da5b45;
+			background-image: -webkit-linear-gradient(#da5b45, #ADFF2F);
+			background-image: linear-gradient(#da5b45, #ADFF2F);
+		  }
+		  100% {
+			background-color: #ADFF2F;
+			background-image: -webkit-linear-gradient(#ADFF2F, #da5b45);
+			background-image: linear-gradient(#ADFF2F, #da5b45);
+		  }
+		}
+		@-webkit-keyframes solidColor {
+		  0% {
+			background-color: #ADFF2F;
+		  }
+		  50% {
+			background-color: #da5b45;
+		  }
+		  100% {
+			background-color: #ADFF2F;
+		  }
+		}
+		@-moz-keyframes solidColor {
+		  0% {
+			background-color: #ADFF2F;
+		  }
+		  50% {
+			background-color: #da5b45;
+		  }
+		  100% {
+			background-color: #ADFF2F;
+		  }
+		}
+		@keyframes solidColor {
+		  0% {
+			background-color: #ADFF2F;
+		  }
+		  50% {
+			background-color: #da5b45;
+		  }
+		  100% {
+			background-color: #ADFF2F;
+		  }
+		}
+		html, body {
+		  height: 100%;
+		}
+
+		body {
+		  background: #222;
+		  color: #FFF;
+		}
+
+		.skewed-bg {
+		  background: #00B285;
+		  padding: 80px 0;
+		  -webkit-transform: skew(0deg, -10deg);
+		  -moz-transform: skew(0deg, -10deg);
+		  -ms-transform: skew(0deg, -10deg);
+		  -o-transform: skew(10deg, -10deg);
+		  transform: skew(0deg, -6deg);
+		  margin-top: -200px;
+		}
+		.skewed-bg .content {
+		  -webkit-transform: skew(0deg, 10deg);
+		  -moz-transform: skew(0deg, 10deg);
+		  -ms-transform: skew(0deg, 10deg);
+		  -o-transform: skew(0deg, 10deg);
+		  transform: skew(0deg, 6deg);
+		  text-align: center;
+		}
+		.skewed-bg .content .title {
+		  padding-top: 150px;
+		  font-weight: normal;
+		}
+		.skewed-bg .content .text {
+		  width: 60%;
+		  margin: 25px auto;
+		  color: #ccfff2;
+		}
+
+		.footer {
+		  padding-top: 80px;
+		}
+		.footer .credits {
+		  text-align: center;
+		  color: #666;
+		}
+		.footer .credits .link {
+		  color: #00B285;
+		  text-decoration: none;
+		}
+	
+	</style>
+	<p id = "subtitle">Track your currency </p>
+			
+			<table id = "money">
+			
+				<tr>
+				
+						<th>Cryptocurrency</th>
+						
+						<th>Currency</th>	
+						
+						<th>Value</th>
+				
+				</tr>
+				
+				<tr id = "BTC">
+				
+					<td> Bitcoin </td>
+					<td onclick="getId(this)" class="dropdown-menu"><span class = "currency">Select currency</span> 
+						<div class = "dropdown-content">
+							<a  href = "#" class  = "inr">Indian Rupee </a>
+							<a  href = "#" class = "usd">US Dollar </a>
+							<a  href = "#" class = "euro">Euro </a>
+							<a  href = "#" class = "yen" >Japanese Yen</a>
+							<a  href = "#" class = "ruble">Ruble </a>
+						</div> </td>
+					<td><span class = "value">0.00</span> </td>
+				
+				</tr>
+				<tr id = "LITE">
+				
+					<td> Litecoin</td>
+					<td  class="dropdown-menu"> <span class = "currency">Select currency</span> 
+						<div class = "dropdown-content">
+							<a  href = "#" class  = "inr">Indian Rupee </a>
+							<a  href = "#" class = "usd">US Dollar </a>
+							<a  href = "#" class = "euro">Euro </a>
+							<a  href = "#" class = "yen" >Japanese Yen</a>
+							<a  href = "#" class = "ruble">Ruble </a>
+						</div> </td>
+					<td> <span class = "value">0.00</span> </td>
+								
+				</tr>
+				<tr>
+				
+					<td > Namecoin </td>
+					<td onclick="getId(this)" class="dropdown-menu"> <span class = "currency">Select currency</span> 
+						<div class = "dropdown-content">
+							<a  href = "#" class  = "inr">Indian Rupee </a>
+							<a  href = "#" class = "usd">US Dollar </a>
+							<a  href = "#" class = "euro">Euro </a>
+							<a  href = "#" class = "yen" >Japanese Yen</a>
+							<a  href = "#" class = "ruble">Ruble </a>
+						</div> </td>
+					<td> <span class = "value">0.00</span> </td>
+				</tr>
+				<tr>
+				
+					<td > Ethereum </td>
+					<td onclick="getId(this)" class="dropdown-menu"> <span class = "currency">Select currency</span> 
+						<div class = "dropdown-content">
+							<a  href = "#" class  = "inr">Indian Rupee </a>
+							<a  href = "#" class = "usd">US Dollar </a>
+							<a  href = "#" class = "euro">Euro </a>
+							<a  href = "#" class = "yen" >Japanese Yen</a>
+							<a  href = "#" class = "ruble">Ruble </a>
+						</div> </td>
+					<td> <span class = "value">0.00</span> </td>
+				</tr>
+
+				<tr>
+				
+					<td > Zcash </td>
+					<td onclick="getId(this)" class="dropdown-menu"> <span class = "currency">Select currency</span> 
+						<div class = "dropdown-content">
+							<a  href = "#" class  = "inr">Indian Rupee </a>
+							<a  href = "#" class = "usd">US Dollar </a>
+							<a  href = "#" class = "euro">Euro </a>
+							<a  href = "#" class = "yen" >Japanese Yen</a>
+							<a  href = "#" class = "ruble">Ruble </a>
+						</div> </td>
+					<td> <span class = "value">0.00</span> </td>
+				</tr>
+
+				<tr>
+				
+					<td > Ripple </td>
+					<td onclick="getId(this)" class="dropdown-menu"> <span class = "currency">Select currency</span> 
+						<div class = "dropdown-content">
+							<a  href = "#" class  = "inr">Indian Rupee </a>
+							<a  href = "#" class = "usd">US Dollar </a>
+							<a  href = "#" class = "euro">Euro </a>
+							<a  href = "#" class = "yen" >Japanese Yen</a>
+							<a  href = "#" class = "ruble">Ruble </a>
+						</div> </td>
+					<td> <span class = "value">0.00</span> </td>
+				</tr>
+				
+			
+			</table>
+		
+	</body>
+
+
+	<script type="text/javascript">
+		
+		//Will increase with increase in currencies
+		var target;
+		var base;
+		var apikey="apikey=2BF58B71-5F84-4403-991A-335AD40A7C71";
+		//var url = "https://api.cryptonator.com/api/ticker/";
+		var url = "https://rest.coinapi.io/v1/exchangerate/";
+		var fsym = "fsym=";
+		var tsym = "%tsym=";
+
+		//var url = "https://min-api.cryptocompare.com/data/pricemultifull?"
+		//fsym=ETH&tsyms=BTC,USD,EUR";
+
+		$("tr").not(':first').hover(
+		  function () {
+		    $(this).css("background","black");
+		    var i = $(this).index();
+
+		    if(i == 1)
+		    	base = "BTC";
+		    else if(i == 2)
+		    	base = "LTC";
+		    else if(i == 3)
+		    	base = "NMC";
+		    else if(i == 4)
+		    	base = "ETH";
+		    else if(i == 5)
+		    	base = "ZEC";
+		    else if(i == 6)
+		    	base = "XRP";
+		  }, 
+		  function () {
+		    $(this).css("background","");
+		  });
+
+		function Get(url)
+		{
+			var httprequest = new XMLHttpRequest();
+			httprequest.open("GET", url, false);
+			httprequest.send();
+			//alert(httprequest.status);
+			return httprequest.responseText;
+		}
+
+		$(".inr").click(function(){
+
+			target = "INR";
+			var row;
+
+			url = "https://rest.coinapi.io/v1/exchangerate/";
+			//url = "https://min-api.cryptocompare.com/data/pricemultifull?"
+			var index = $(".inr").index(this);
+
+			$(".currency")[index].innerHTML = "INR";
+
+			url += base + "/" + target;
+			url += "?" + apikey;
+
+			var obj = Get(url);
+
+			var jsonobject = JSON.parse(obj);
+
+			var num1 = jsonobject.rate;
+
+			$(".value")[index].innerHTML = parseFloat(Math.round(num1 * 100) / 100).toFixed(3);
+
+			request.end();
+
+		});
+
+		$(".usd").click(function(){
+
+			url = "https://rest.coinapi.io/v1/exchangerate/";
+			//url = "https://min-api.cryptocompare.com/data/pricemultifull?"
+
+			target = "USD";
+	
+			url += base + "/" + target;
+			url += "?" + apikey;
+
+			var obj = Get(url);
+
+			var jsonobject = JSON.parse(obj);
+
+			var index = $(".usd").index(this);
+			$(".currency")[index].innerHTML = "USD";
+
+			//alert(jsonobject.rate);
+			var num1 = jsonobject.rate;
+
+			$(".value")[index].innerHTML = parseFloat(Math.round(num1 * 100) / 100).toFixed(3);
+
+			request.end();
+
+		});
+
+		$(".yen").click(function(){
+
+			url = "https://rest.coinapi.io/v1/exchangerate/";
+			target = "JPY";
+
+			url += base + "/" + target;
+			url += "?" + apikey;
+
+			var obj = Get(url);
+
+			var jsonobject = JSON.parse(obj);
+			
+			var index = $(".yen").index(this);
+			$(".currency")[index].innerHTML = "YEN";
+
+			var num1 = jsonobject.rate;
+
+			$(".value")[index].innerHTML = parseFloat(Math.round(num1 * 100) / 100).toFixed(3);
+
+		});
+
+		$(".ruble").click(function(){
+
+			url = "https://rest.coinapi.io/v1/exchangerate/";
+			target = "RUB";
+
+			url += base + "/" + target;
+			url += "?" + apikey;
+
+			var obj = Get(url);
+
+			var jsonobject = JSON.parse(obj);
+			
+			var index = $(".ruble").index(this);
+			$(".currency")[index].innerHTML = "RUB";
+
+			//alert(jsonobject.rate);
+			var num1 = jsonobject.rate;
+
+			$(".value")[index].innerHTML = parseFloat(Math.round(num1 * 100) / 100).toFixed(3);
+
+
+		});
+
+		$(".euro").click(function(){
+
+			url = "https://rest.coinapi.io/v1/exchangerate/";
+			target = "EUR";
+
+			url += base + "/" + target;
+			url += "?" + apikey;
+
+			var obj = Get(url);
+
+			var jsonobject = JSON.parse(obj);
+			
+			var index = $(".euro").index(this);
+			$(".currency")[index].innerHTML = "EUR";
+
+			var num1 = jsonobject.rate;
+
+			$(".value")[index].innerHTML = parseFloat(Math.round(num1 * 100) / 100).toFixed(3);
+
+		});
+
+
+	</script>
+	</html>
