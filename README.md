@@ -5,7 +5,7 @@ The tools used are HTML, CSS and Javascript.
 
 Running the project
 
-Install WAMP
-Run WAMP.
-open web page from browser: http://localhost/CryptoTrial_recent.html
+1)Install WAMP
+2)Run WAMP.
+3)open web page from browser: http://localhost/CryptoTrial_recent.html
 
