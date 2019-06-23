@@ -11,4 +11,4 @@
 
 3)Open web page from browser: http://localhost/CryptoTrial_recent.html
 
-![sign_up](https://user-images.githubusercontent.com/26721631/59978483-498f4700-95fa-11e9-9495-9fafe2db57d7.jpg)
+
